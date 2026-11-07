@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+sessions/
+*.session
+*.session-journal
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+*.pyc
+*.mp3
+*.m4a
+*.wav
+*.flac
+*.ogg
