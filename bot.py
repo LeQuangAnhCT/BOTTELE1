@@ -242,7 +242,8 @@ async def telegram_link(message, context, url):
         raise DownloadError("Đường dẫn tin nhắn Telegram không hợp lệ.")
     client = context.application.bot_data.get("user_client")
     if client is None or not await client.is_user_authorized():
-        raise DownloadError("Chưa đăng nhập Telegram cá nhân. Chạy: python login.py")
+        await message.reply_text("❌ Chưa đăng nhập Telegram cá nhân. Chạy: python login.py, rồi khởi động lại bot.")
+        return
 
     async def op(directory):
         try:
